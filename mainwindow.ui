@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>950</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ANALIZADOR DE PLANIFICACION CPU (SHORT JOB FIRST) SJF</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_main">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_top">
+      <item>
+       <widget class="QGroupBox" name="groupBox_ingreso">
+        <property name="title">
+         <string>Ingreso de Procesos (SJF)</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_ingreso">
+         <item>
+          <widget class="QTableWidget" name="tableProcesos">
+           <column>
+            <property name="text">
+             <string>Proceso</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>T. Llegada</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>T. Ráfaga</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_botones">
+           <item>
+            <widget class="QPushButton" name="btnAgregar">
+             <property name="text">
+              <string>Añadir Proceso</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnSimular">
+             <property name="text">
+              <string>Analizar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnLimpiar">
+             <property name="text">
+              <string>Clear</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_gantt">
+        <property name="title">
+         <string>Diagrama de Gantt</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_gantt">
+         <item>
+          <widget class="QTextEdit" name="txtGantt">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="placeholderText">
+            <string>El Diagrama de Gantt (SJF No Expropiativo) se mostrara aqui con formato.</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_resultados">
+      <property name="title">
+       <string>Procedimiento y Calculos</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_resultados">
+       <item>
+        <widget class="QTextEdit" name="txtResultados">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="placeholderText">
+          <string>Aqui se mostraran los resultados detallados de SJF Expropiativo (SRTF) y No Expropiativo.</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
